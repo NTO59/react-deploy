@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Knowledges from './pages/Knowledges';
@@ -11,13 +11,12 @@ const App = () => {
     <>
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="/" exact component= {Home} />
-          <Route path="/competences" exact component= {Knowledges} />
-          <Route path="/portfolio" exact component= {Portfolio} />
-          <Route path="/contact" exact component= {Contact} />
-          <Route component= {NotFound} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/competences" component={Knowledges} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
+          <Route component={NotFound} />
         </Switch>
-      
       </Router>
     </>
   );
