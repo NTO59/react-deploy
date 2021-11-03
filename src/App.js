@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Knowledges from './pages/Knowledges';
@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound';
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/" exact component= {Home} />
           <Route path="/competences" exact component= {Knowledges} />
@@ -18,7 +18,7 @@ const App = () => {
           <Route component= {NotFound} />
         </Switch>
       
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
