@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Noto+Serif+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,400;0,600;0,800;1,100&family=Zen+Kurenaido&display=swap');
+
+$font-1: 'Noto Serif Display', serif;
+$font-2: 'Josefin Sans', serif;
+$font-3: 'Zen Kurenaido', sans-serif;
+
+$color-1: #ede3e3;
+$color-2: #326273; 
+$color-3: #f8c291;
+$color-4: #5c9ead;
+$color-5: #E39774;
+$color-6: #eee9e9;
+$white: #fff;
+$black: #2d3436;
+
+$border-radius: 25px;
+$shadow: 0 1px 3px $black;
+$min-height: 95vh;
+
+@mixin verticalCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 1rem auto;
+    max-width: 1200px;
+    font-family: $font-3;
+    //color: $black;
+}
+button{
+    cursor: pointer;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    //color: $black;
+    cursor: pointer;
+}
+a:visited{
+    color: $black;
+}
+.home, .knowledges, .portfolio, .contact {
+    display: flex;
+    @media screen and (max-width: 850px) {
+        display: block !important;
+    }
+}
+.homeContent, .KnowledgesContent, .portfolioContent, .contactContent{
+    margin-left: .4rem;
+    @media screen and (max-width: 850) {
+        margin-left: 0 !important;
+    }
+}
