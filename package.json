@@ -1,6 +1,6 @@
 {
-  "homepage": "https://nto59.github.io/react-deploy-cv",
-  "name": "react-deploy-cv",
+  "homepage": "https://nto59.github.io/react-deploy",
+  "name": "react-deploy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
